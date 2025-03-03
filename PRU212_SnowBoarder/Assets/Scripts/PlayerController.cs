@@ -22,10 +22,13 @@ public class PlayerController : MonoBehaviour
     // The layer mask that defines what is considered ground
     [SerializeField] LayerMask groundLayer;  
     // The radius of the ground check area, determining how far to check for ground contact
-    [SerializeField] float groundCheckRadius = 0.5f;  
+    [SerializeField] float groundCheckRadius = 0.5f;
+    [SerializeField] float reducedSpeed = 5f;
 
     bool canMove = true;
-
+    float currentSpeed; // Track current speed dynamically
+    bool isSpeedReduced = false; // Add this at the top with other member variables
+ 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -41,6 +44,9 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("GroundCheck object not found! Make sure it exists in the hierarchy.");
             enabled = false;
         }
+
+        currentSpeed = baseSpeed; // Set initial speed
+        surfaceEffector2D.speed = currentSpeed;
     }
 
     void Update()
@@ -100,18 +106,36 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void RespondToBoost()
     {
+        if (isSpeedReduced) return;
         // If the player is not on a surface effector, return
         if (surfaceEffector2D == null) return;
 
         // If the player is on a surface effector, respond to boost
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            surfaceEffector2D.speed = boostSpeed;
+            currentSpeed = boostSpeed;
+            surfaceEffector2D.speed = currentSpeed;
         }
         // If the player is not pressing the up arrow key, set the speed back to the base speed
         else
         {
-            surfaceEffector2D.speed = baseSpeed;
+            currentSpeed = baseSpeed;
+            surfaceEffector2D.speed = currentSpeed;
         }
     }
+
+    public void ReduceSpeed()
+    {
+        isSpeedReduced = true;
+        currentSpeed = reducedSpeed;
+        surfaceEffector2D.speed = currentSpeed;
+        // Restore speed after 3 seconds
+        Invoke("ResetSpeed", 3f);
+    }
+
+    void ResetSpeed()
+    {
+        isSpeedReduced = false; // Allows speed changes again
+    }
+
 }
