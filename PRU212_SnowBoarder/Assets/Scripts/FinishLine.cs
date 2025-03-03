@@ -1,9 +1,5 @@
-﻿// ▼ The "using" Keyword 
-//      → defines the "Namespace" Directive 
-//      → that "Contains" a "Class Used" in the "Code" ▼
-using UnityEngine;
-using UnityEngine.SceneManagement; // ◄◄ "SceneManagement" Namespace ◄◄
-
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
@@ -11,6 +7,10 @@ public class FinishLine : MonoBehaviour
     [SerializeField] float loadDelay = 1f; 
     [SerializeField] ParticleSystem finishEffect;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
@@ -23,6 +23,9 @@ public class FinishLine : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Reload the Scene to Level 2
+    /// </summary>
     void ReloadScene()
     {
         SceneManager.LoadScene("Level2");

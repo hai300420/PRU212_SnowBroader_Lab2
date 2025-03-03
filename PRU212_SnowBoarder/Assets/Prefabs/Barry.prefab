@@ -5114,6 +5114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torqueAmount: 9
+  spinTorque: 20
   boostSpeed: 30
   baseSpeed: 20
 --- !u!1 &3399229309161146156
