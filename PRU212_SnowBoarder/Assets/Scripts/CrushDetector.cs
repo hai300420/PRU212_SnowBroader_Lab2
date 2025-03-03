@@ -1,57 +1,41 @@
-// ▼ The "using" Keyword 
-//      → defines the "Namespace" Directive 
-//      → that "Contains" a "Class Used" in the "Code" ▼
-using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI; // ◄◄ "SceneManagement" Namespace ◄◄
-
 
 public class CrushDetector : MonoBehaviour
 {
-    // ▼ "SerializeField" Attribute
-    //      → to Dysplay the "Variable" 
-    //      → in the "Inspector" Window ▼
-    [SerializeField] float loadDelay = 0.5f;  // ◄◄ "1/2 Second" Delay ◄◄
+    [SerializeField] float loadDelay = 0.5f;
     [SerializeField] ParticleSystem crushEffect;
     [SerializeField] AudioClip crushSFX;
     public GameObject scoreUI;
 
-    // ▼ "Set Variable" 
-    //      → to "Avoid Double Sounds & Particles Effect" 
-    //      → when "Player Hits" the "Ground" ▼
+    // "Has Crushed" Boolean
     bool hasCrushed = false; 
 
 
-   // ▬ "On Tregger Enter 2D()" Method 
-  //       → with a "Delay" of "2 Seconds"
-   //      → to "Call" the "ReloadScene()" Method ▬
+    /// <summary>
+    /// Find Any Object By Type
+    /// </summary>
+    /// <param name="other"></param>
    void OnTriggerEnter2D(Collider2D other) 
    {
-        // ▼ "If" the "Player Hits" the "Ground" & "has Crushed" is "False" ▼
-        if (other.tag == "Ground" && !hasCrushed)
+
+       // If the "Player" "Hits" the "Ground"
+       if (other.tag == "Ground" && !hasCrushed)
         {
 
-            // ▼ "Set Variable" 
-            //      → to "Avoid Double Sounds & Particles Effect" 
-            //      → when "Player Hits" the "Ground" ▼
+            // Set "Has Crushed" to "True"
             hasCrushed = true;
 
-            // ▼ "Call" the "DisableControls()" Method 
-            //      → to "Disable" the "Input" of the "Player" ▼
+            // Find the "Player Controller" Object
             FindAnyObjectByType<PlayerController>().DisableControls();
 
-            // ▼ "Acccessing" the "Play()" Method 
-            //     of the "Crush Effect" Particle System ▼
+           //  "Play" the "Crush Effect"
             crushEffect.Play();
 
-            // ▼ "Getting" the "Audio Source Component" 
-            //     → and "Play It" when the "Player Hits" the "Ground" ▼
+            // "Play" the "Crush Sound Effect"
             GetComponent<AudioSource>().PlayOneShot(crushSFX);
 
-            // ▼ "Create" a "Delay" of "1 Seconds" 
-            //      → to "Call" the "ReloadScene()" Method ▼
+            // "Invoke" the "ReloadScene()" Method
             Invoke("ReloadScene", loadDelay);
         }
 
@@ -73,18 +57,12 @@ public class CrushDetector : MonoBehaviour
             scoreUI.GetComponent<Score>().AddScore(10);
         }
     }
-
-
-
-   // ▬ "ReloadScene()" Method 
-   //       → to "Reload" the "Level 1" Scene
-   //       → when he "Player Hits" the "Ground" ▬
+   
+   /// <summary>
+   /// Find Any Object By Type
+   /// </summary>
    void ReloadScene()
    {
-        // ▼ "LoadScene()" Built-In Method
-        //      → from the "SceneManager" Class 
-        //      → which will "Load" our "Level 1" Scene, 
-        //      → with "Index 0" ▼
         SceneManager.LoadScene(0);
    }
 }
