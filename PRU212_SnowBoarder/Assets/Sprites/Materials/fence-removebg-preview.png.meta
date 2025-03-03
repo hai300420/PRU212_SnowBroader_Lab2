@@ -497,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fence-removebg-preview_0: 5316623460224530568
+      fence-removebg-preview_1: -365621689963065086
+      fence-removebg-preview_10: -2815045469552249424
+      fence-removebg-preview_11: -8336438350491808233
+      fence-removebg-preview_12: -2420383610430587238
+      fence-removebg-preview_13: 5320245030168501654
+      fence-removebg-preview_14: 7026090688083763643
+      fence-removebg-preview_2: 3781306368770406830
+      fence-removebg-preview_3: -6371099672323490257
+      fence-removebg-preview_4: 9139644861909286987
+      fence-removebg-preview_5: -3997975642483956027
+      fence-removebg-preview_6: -8634504672230622738
+      fence-removebg-preview_7: 7688702033319551027
+      fence-removebg-preview_8: -4962216979371610940
+      fence-removebg-preview_9: -1053241711780941445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

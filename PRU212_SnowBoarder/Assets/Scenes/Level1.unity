@@ -5085,8 +5085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230d82b793444a44d868edab7dbb4bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectAudioSource: {fileID: 0}
-  coinClip: {fileID: 0}
+  effectAudioSource: {fileID: 1446557205}
+  coinClip: {fileID: 8300000, guid: 0f4a85dd2e998a742a9270ef03e670b2, type: 3}
 --- !u!4 &1780833072
 Transform:
   m_ObjectHideFlags: 0

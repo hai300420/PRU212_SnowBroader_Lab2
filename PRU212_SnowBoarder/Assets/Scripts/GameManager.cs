@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static int score;
+    public static int score;
+    public static int highestScore = 0;
     [SerializeField] private TextMeshProUGUI scoreText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void AddScore(int points)
     {
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     }
     public void UpdateScore()
     {
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
+        highestScore = Mathf.Max(score, highestScore);
     }
 }
