@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|c:\\users\\admin\\source\\repos\\pru212_snowbroader_lab2\\pru212_snowboarder\\assets\\scripts\\crushdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crushdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\assets\\scripts\\playercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|c:\\users\\admin\\source\\repos\\pru212_snowbroader_lab2\\pru212_snowboarder\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|c:\\users\\admin\\source\\repos\\pru212_snowbroader_lab2\\pru212_snowboarder\\assets\\scripts\\playercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|c:\\users\\admin\\source\\repos\\pru212_snowbroader_lab2\\pru212_snowboarder\\assets\\scripts\\crushdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crushdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CrushDetector.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\CrushDetector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CrushDetector.cs",
@@ -73,14 +73,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T15:55:03.213Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlayerCollision.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\PlayerCollision.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerCollision.cs",
