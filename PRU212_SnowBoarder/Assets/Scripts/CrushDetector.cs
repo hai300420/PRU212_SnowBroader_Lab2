@@ -63,7 +63,7 @@ public class CrushDetector : MonoBehaviour
         {
             Debug.Log("Fence hit! Speed reducing...");
             playerController.ReduceSpeed();
-            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
 
     }
