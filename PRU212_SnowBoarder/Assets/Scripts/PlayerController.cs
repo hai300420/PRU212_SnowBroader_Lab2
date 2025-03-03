@@ -1,106 +1,117 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// Player Controller
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
-    // ▼ "Class/Member Variables" ▼
     Rigidbody2D rb2d;
     SurfaceEffector2D surfaceEffector2D;
 
-
-    // ▼ "Serialize Field" 
-    //      → to Make it "Visible" in the "Inspector" ▼
-    [SerializeField] float torqueAmount = 10f;
-    [SerializeField] float boostSpeed = 30f; 
-    [SerializeField] float baseSpeed = 20f; 
+    // The amount of torque applied to the player for rotation
+    [SerializeField] float torqueAmount = 10f;  
+    // The speed when the player is boosted
+    [SerializeField] float boostSpeed = 30f;  
+    // The normal movement speed of the player
+    [SerializeField] float baseSpeed = 20f;  
+    // The force applied when the player jumps
+    [SerializeField] float jumpForce = 10f;  
+    // Reference to the GroundCheck transform, used to detect if the player is on the ground
+    [SerializeField] Transform groundCheck;  
+    // The layer mask that defines what is considered ground
+    [SerializeField] LayerMask groundLayer;  
+    // The radius of the ground check area, determining how far to check for ground contact
+    [SerializeField] float groundCheckRadius = 0.5f;  
 
     bool canMove = true;
 
-
-    // ▬ Start is called once before the first execution of Update after the MonoBehaviour is created  ▬
     void Start()
     {
-        // ▼ Get the "Rigid Body 2D" Component of the "Player" Object 
-        //      → and "Store it" in the "Local Variable" ▼
         rb2d = GetComponent<Rigidbody2D>();
-
-        // ▼ Access the "FindObjectOfType()" Method ▼
         surfaceEffector2D = FindObjectOfType<SurfaceEffector2D>();
-    }
 
-
-
-    // ▬ Update is called once per frame ▬
-    void Update()
-    {
-        // ▼ "If" the "Player" is "Can Move" ▼
-        if (canMove)
+        if (groundCheck == null)
         {
-            // ▼ "Call" the "Methods" ▼
-            RotatePlayer();
-            RespondToBoost(); // ◄◄ "Player Improvement" ◄◄
+            groundCheck = transform.Find("GroundCheck");
+        }
+
+        if (groundCheck == null)
+        {
+            Debug.LogError("GroundCheck object not found! Make sure it exists in the hierarchy.");
+            enabled = false;
         }
     }
-        
 
-    // ▬ "DisableControls()" Method 
-    //       → (with a "public" Access Modifier)
-    //       → that "Disables" the "Input" of the "Player" ▬
+    void Update()
+    {
+        if (canMove)
+        {
+            RotatePlayer();
+            RespondToBoost();
+            Jump();
+        }
+    }
+
     public void DisableControls()
     {
-        // ▼ Set "Can Move" to "False" ▼
         canMove = false;
     }
 
-
-
-
-    // ▬ "RotatePlayer()" Method ▬
     void RotatePlayer()
     {
-        // ▼ "If" the "Left Arrow" Key is "Pressed" 
-        //      → the "Player" will "Rotate Left" ▼
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            // ▼ "Apply" a "Force" → to "Rotate Left" the "Player" 
-            //      → using "AddTorque()" Method ▼
             rb2d.AddTorque(torqueAmount);
         }
-
-
-        // ▼ "Else If" the "Right Arrow" Key is "Pressed" 
-        //      → the "Player" will "Rotate Right" ▼
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            // ▼ "Apply" a "Force" → to "Rotate Right" the "Player" 
-            //      → using "AddTorque()" Method ▼
             rb2d.AddTorque(-torqueAmount);
         }
     }
 
+    void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
+            rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, jumpForce);
+        }
+    }
+
+    /// <summary>
+    /// Check if the player is grounded
+    /// </summary>
+    /// <returns></returns>
+    bool IsGrounded()
+    {
+        if (groundCheck == null) return false;
+
+        bool grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        Debug.DrawRay(groundCheck.position, Vector2.down * groundCheckRadius, grounded ? Color.green : Color.red);
+        Debug.Log($"IsGrounded: {grounded}");
+
+        return grounded;
+    }
 
 
-     // ▬ "RespondToBoost()" Method 
-    //       → that "Increase" the "Player Speed" ▬
+    /// <summary>
+    /// Respond to boost
+    /// </summary>
     void RespondToBoost()
     {
-       // ▼ "If" the "Up Arrow" Key is "Pressed" 
-        //      → the "Player" will "Boost/Increase Speed" ▼
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
+        // If the player is not on a surface effector, return
+        if (surfaceEffector2D == null) return;
+
+        // If the player is on a surface effector, respond to boost
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            // ▼ "Access" the "Surface Effector 2D" Component
-            //      → and "Change" It's "Speed" Property Value 
-            //      → to "Boost Speed" ▼
             surfaceEffector2D.speed = boostSpeed;
         }
- 
-        // ▼ Otherwise, "Stay" at "Normal Speed" ▼
+        // If the player is not pressing the up arrow key, set the speed back to the base speed
         else
         {
-            // ▼ "Access" the "Surface Effector 2D" Component
-            //      → and "Change" It's "Speed" Property Value 
-            //      → to "Base Speed" ▼
             surfaceEffector2D.speed = baseSpeed;
-        }       
+        }
     }
 }
