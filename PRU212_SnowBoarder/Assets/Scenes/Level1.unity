@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 293955490}
   - component: {fileID: 293955489}
   - component: {fileID: 293955488}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Level Sprite Shape
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1797,6 +1797,14 @@ PrefabInstance:
     - target: {fileID: 2821878415114484999, guid: ae52e4f682ac91f47b9852ff85416b93, type: 3}
       propertyPath: m_Name
       value: Barry
+      objectReference: {fileID: 0}
+    - target: {fileID: 7208651674977329369, guid: ae52e4f682ac91f47b9852ff85416b93, type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7208651674977329369, guid: ae52e4f682ac91f47b9852ff85416b93, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3217,8 +3225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230d82b793444a44d868edab7dbb4bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectAudioSource: {fileID: 1446557205}
-  coinClip: {fileID: 8300000, guid: 0f4a85dd2e998a742a9270ef03e670b2, type: 3}
+  effectAudioSource: {fileID: 0}
+  coinClip: {fileID: 0}
 --- !u!4 &1780833072
 Transform:
   m_ObjectHideFlags: 0
