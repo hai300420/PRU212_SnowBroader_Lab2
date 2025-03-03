@@ -6444,7 +6444,7 @@ GameObject:
   - component: {fileID: 332930292}
   - component: {fileID: 332930295}
   - component: {fileID: 332930296}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Level Sprite Shape
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -86618,6 +86618,14 @@ PrefabInstance:
     - target: {fileID: 2821878415114484999, guid: ae52e4f682ac91f47b9852ff85416b93, type: 3}
       propertyPath: m_Name
       value: Barry
+      objectReference: {fileID: 0}
+    - target: {fileID: 7208651674977329369, guid: ae52e4f682ac91f47b9852ff85416b93, type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7208651674977329369, guid: ae52e4f682ac91f47b9852ff85416b93, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
