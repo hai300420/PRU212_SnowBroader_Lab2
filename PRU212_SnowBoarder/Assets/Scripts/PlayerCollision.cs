@@ -3,11 +3,11 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     private GameManager gameManager;
-    //private AudioManager audioManager;
+    private AudioManager audioManager;
     private void Awake()
     {
         gameManager = FindAnyObjectByType<GameManager>();
-        //audioManager = FindAnyObjectByType<AudioManager>();
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +26,7 @@ public class PlayerCollision : MonoBehaviour
         if (other.CompareTag("Coin"))
         {
             Destroy(other.gameObject);
-            //audioManager.PlayCoinSound();
+            audioManager.PlayCoinSound();
             gameManager.AddScore(10);
         }
     }
