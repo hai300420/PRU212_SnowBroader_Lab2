@@ -55,23 +55,7 @@ public class CrushDetector : MonoBehaviour
             Invoke("ReloadScene", loadDelay);
         }
 
-        if(other.tag == "SnowTree")
-        {
-            Debug.Log("Snow Tree Hit");
-            scoreUI.GetComponent<Score>().RemoveScore(10);
-        }
-
-        if (other.tag == "SnowRock")
-        {
-            Debug.Log("Snow Rock Hit");
-            scoreUI.GetComponent<Score>().RemoveScore(10);
-        }
-
-        if (other.tag == "SnowFlakes")
-        {
-            Debug.Log("Snow Flake Hit");
-            scoreUI.GetComponent<Score>().AddScore(10);
-        }
+        
     }
 
 

@@ -1,22 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GitHub\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|d:\\github\\pru212_snowbroader_lab2\\pru212_snowboarder\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|c:\\users\\admin\\source\\repos\\pru212_snowbroader_lab2\\pru212_snowboarder\\assets\\scripts\\playercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|d:\\github\\pru212_snowbroader_lab2\\pru212_snowboarder\\assets\\scripts\\crushdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crushdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|d:\\github\\pru212_snowbroader_lab2\\pru212_snowboarder\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|D:\\GitHub\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\assets\\scripts\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,70 +18,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "D:\\GitHub\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
-              "ToolTip": "D:\\GitHub\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\MainMenu.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAmAAAA",
+              "Title": "PlayerCollision.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\PlayerCollision.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerCollision.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\PlayerCollision.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerCollision.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T04:19:53.225Z",
+              "WhenOpened": "2025-03-03T15:42:01.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CrushDetector.cs",
-              "DocumentMoniker": "D:\\GitHub\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\CrushDetector.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CrushDetector.cs",
-              "ToolTip": "D:\\GitHub\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\CrushDetector.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CrushDetector.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAQwEoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T04:09:46.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "PlayerController.cs",
-              "DocumentMoniker": "D:\\GitHub\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
-              "ToolTip": "D:\\GitHub\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBAAAAAYAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T03:56:31.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FinishLine.cs",
-              "DocumentMoniker": "D:\\GitHub\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\FinishLine.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FinishLine.cs",
-              "ToolTip": "D:\\GitHub\\PRU212_SnowBroader_Lab2\\PRU212_SnowBoarder\\Assets\\Scripts\\FinishLine.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FinishLine.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAcwAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T14:22:00.144Z"
+              "WhenOpened": "2025-03-03T15:40:13.743Z"
             }
           ]
         }
