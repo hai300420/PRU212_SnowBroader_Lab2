@@ -5,16 +5,14 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
-  - Coin
-  - Fence
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Player
+  - pause
   - 
   - 
   - 
@@ -43,12 +41,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Item
-    uniqueID: 4025977371
-    locked: 0
-  - name: UI
-    uniqueID: 3254152583
     locked: 0
   m_RenderingLayers:
   - Default

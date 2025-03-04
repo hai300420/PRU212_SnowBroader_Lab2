@@ -21,18 +21,13 @@ public class CrushDetector : MonoBehaviour
     // ▼ "Set Variable" 
     //      → to "Avoid Double Sounds & Particles Effect" 
     //      → when "Player Hits" the "Ground" ▼
-    bool hasCrushed = false;
-    private PlayerController playerController; // Reference to PlayerController
+    bool hasCrushed = false; 
 
-    void Start()
-    {
-        playerController = FindAnyObjectByType<PlayerController>(); // Find PlayerController in the scene
-    }
 
-    // ▬ "On Tregger Enter 2D()" Method 
-    //       → with a "Delay" of "2 Seconds"
-    //      → to "Call" the "ReloadScene()" Method ▬
-    void OnTriggerEnter2D(Collider2D other) 
+   // ▬ "On Tregger Enter 2D()" Method 
+  //       → with a "Delay" of "2 Seconds"
+   //      → to "Call" the "ReloadScene()" Method ▬
+   void OnTriggerEnter2D(Collider2D other) 
    {
         // ▼ "If" the "Player Hits" the "Ground" & "has Crushed" is "False" ▼
         if (other.tag == "Ground" && !hasCrushed)
@@ -59,13 +54,24 @@ public class CrushDetector : MonoBehaviour
             //      → to "Call" the "ReloadScene()" Method ▼
             Invoke("ReloadScene", loadDelay);
         }
-        if (other.CompareTag("Fence"))
+
+        if(other.tag == "SnowTree")
         {
-            Debug.Log("Fence hit! Speed reducing...");
-            playerController.ReduceSpeed();
-            Destroy(other.gameObject);
+            Debug.Log("Snow Tree Hit");
+            scoreUI.GetComponent<Score>().RemoveScore(10);
         }
 
+        if (other.tag == "SnowRock")
+        {
+            Debug.Log("Snow Rock Hit");
+            scoreUI.GetComponent<Score>().RemoveScore(10);
+        }
+
+        if (other.tag == "SnowFlakes")
+        {
+            Debug.Log("Snow Flake Hit");
+            scoreUI.GetComponent<Score>().AddScore(10);
+        }
     }
 
 
