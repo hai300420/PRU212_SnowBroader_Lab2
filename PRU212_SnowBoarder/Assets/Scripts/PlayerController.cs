@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 /// <summary>
@@ -8,19 +8,24 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb2d;
     SurfaceEffector2D surfaceEffector2D;
+    AudioSource audioSource;  // AudioSource để phát âm thanh
+
+    // Âm thanh khi nhảy và khi lộn vòng
+    [SerializeField] AudioClip jumpSound;
+    [SerializeField] AudioClip flipSound;  // Âm thanh khi lộn vòng
 
     // The amount of torque applied to the player for rotation
-    [SerializeField] float torqueAmount = 10f;  
+    [SerializeField] float torqueAmount = 10f;
     // The speed when the player is boosted
-    [SerializeField] float boostSpeed = 30f;  
+    [SerializeField] float boostSpeed = 30f;
     // The normal movement speed of the player
-    [SerializeField] float baseSpeed = 20f;  
+    [SerializeField] float baseSpeed = 20f;
     // The force applied when the player jumps
-    [SerializeField] float jumpForce = 10f;  
+    [SerializeField] float jumpForce = 10f;
     // Reference to the GroundCheck transform, used to detect if the player is on the ground
-    [SerializeField] Transform groundCheck;  
+    [SerializeField] Transform groundCheck;
     // The layer mask that defines what is considered ground
-    [SerializeField] LayerMask groundLayer;  
+    [SerializeField] LayerMask groundLayer;
     // The radius of the ground check area, determining how far to check for ground contact
     [SerializeField] float groundCheckRadius = 0.5f;
     [SerializeField] float reducedSpeed = 5f;
@@ -28,10 +33,15 @@ public class PlayerController : MonoBehaviour
     bool canMove = true;
     float currentSpeed; // Track current speed dynamically
     bool isSpeedReduced = false; // Add this at the top with other member variables
- 
+
+    // Biến để kiểm tra lộn vòng
+    float previousRotation = 0f;
+    float totalRotation = 0f; // Tổng số độ đã xoay
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();  // Lấy AudioSource trên Player
         surfaceEffector2D = FindObjectOfType<SurfaceEffector2D>();
 
         if (groundCheck == null)
@@ -56,6 +66,7 @@ public class PlayerController : MonoBehaviour
             RotatePlayer();
             RespondToBoost();
             Jump();
+            CheckFlip(); // Kiểm tra lộn vòng
         }
     }
 
@@ -81,6 +92,33 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, jumpForce);
+
+            // Phát âm thanh khi nhảy
+            if (jumpSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(jumpSound);
+            }
+        }
+    }
+
+    // Hàm kiểm tra và phát âm thanh khi lộn vòng
+    void CheckFlip()
+    {
+        float currentRotation = transform.eulerAngles.z;
+        float deltaRotation = Mathf.DeltaAngle(previousRotation, currentRotation);
+        totalRotation += deltaRotation;
+        previousRotation = currentRotation;
+
+        // Kiểm tra nếu đã lộn đủ 360 độ
+        if (Mathf.Abs(totalRotation) >= 360f)
+        {
+            totalRotation = 0f; // Reset lại tổng số độ đã xoay
+
+            // Phát âm thanh khi lộn vòng
+            if (flipSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(flipSound);
+            }
         }
     }
 
@@ -100,23 +138,19 @@ public class PlayerController : MonoBehaviour
         return grounded;
     }
 
-
     /// <summary>
     /// Respond to boost
     /// </summary>
     void RespondToBoost()
     {
         if (isSpeedReduced) return;
-        // If the player is not on a surface effector, return
         if (surfaceEffector2D == null) return;
 
-        // If the player is on a surface effector, respond to boost
         if (Input.GetKey(KeyCode.UpArrow))
         {
             currentSpeed = boostSpeed;
             surfaceEffector2D.speed = currentSpeed;
         }
-        // If the player is not pressing the up arrow key, set the speed back to the base speed
         else
         {
             currentSpeed = baseSpeed;
@@ -129,7 +163,6 @@ public class PlayerController : MonoBehaviour
         isSpeedReduced = true;
         currentSpeed = reducedSpeed;
         surfaceEffector2D.speed = currentSpeed;
-        // Restore speed after 3 seconds
         Invoke("ResetSpeed", 3f);
     }
 
@@ -137,5 +170,4 @@ public class PlayerController : MonoBehaviour
     {
         isSpeedReduced = false; // Allows speed changes again
     }
-
 }
