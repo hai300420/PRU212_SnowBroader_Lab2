@@ -64,6 +64,7 @@ public class CrushDetector : MonoBehaviour
             Debug.Log("Fence hit! Speed reducing...");
             playerController.ReduceSpeed();
             Destroy(other.gameObject);
+            GetComponent<AudioSource>().PlayOneShot(crushSFX);
         }
 
     }
@@ -79,6 +80,8 @@ public class CrushDetector : MonoBehaviour
         //      → from the "SceneManager" Class 
         //      → which will "Load" our "Level 1" Scene, 
         //      → with "Index 0" ▼
+        GameManager.Flag = 0; // set 0 when die
+        GameManager gameManager = new GameManager();
         SceneManager.LoadScene(0);
    }
 }

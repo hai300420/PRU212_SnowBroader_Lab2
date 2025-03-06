@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     public static int highestScore = 0;
     [SerializeField] private TextMeshProUGUI scoreText;
 
+    public static int Flag = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

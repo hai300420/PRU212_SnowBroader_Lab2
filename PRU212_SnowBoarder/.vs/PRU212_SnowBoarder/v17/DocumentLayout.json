@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PRU(Full)\\PRU212_SnowBroader_Lab2_DoneHai\\PRU212_SnowBoarder\\",
+  "WorkspaceRootPath": "D:\\GitHub\\PRU212_SnowBroader_Lab2_Fixcode\\PRU212_SnowBoarder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|d:\\pru(full)\\pru212_snowbroader_lab2_donehai\\pru212_snowboarder\\assets\\scenes\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|d:\\github\\pru212_snowbroader_lab2_fixcode\\pru212_snowboarder\\assets\\scripts\\gameovercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameovercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|d:\\pru(full)\\pru212_snowbroader_lab2_donehai\\pru212_snowboarder\\assets\\scenes\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|d:\\github\\pru212_snowbroader_lab2_fixcode\\pru212_snowboarder\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|d:\\github\\pru212_snowbroader_lab2_fixcode\\pru212_snowboarder\\assets\\scripts\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|d:\\github\\pru212_snowbroader_lab2_fixcode\\pru212_snowboarder\\assets\\scripts\\crushdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A7EB79-C6BF-3911-C49B-F7D38F54AA86}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crushdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +26,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FinishLine.cs",
+              "DocumentMoniker": "D:\\GitHub\\PRU212_SnowBroader_Lab2_Fixcode\\PRU212_SnowBoarder\\Assets\\Scripts\\FinishLine.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FinishLine.cs",
+              "ToolTip": "D:\\GitHub\\PRU212_SnowBroader_Lab2_Fixcode\\PRU212_SnowBoarder\\Assets\\Scripts\\FinishLine.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FinishLine.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAowEAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T17:01:42.054Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PauseMenu.cs",
-              "DocumentMoniker": "D:\\PRU(Full)\\PRU212_SnowBroader_Lab2_DoneHai\\PRU212_SnowBoarder\\Assets\\Scenes\\PauseMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\PauseMenu.cs",
-              "ToolTip": "D:\\PRU(Full)\\PRU212_SnowBroader_Lab2_DoneHai\\PRU212_SnowBoarder\\Assets\\Scenes\\PauseMenu.cs",
-              "RelativeToolTip": "Assets\\Scenes\\PauseMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAZAAAAAAAAAA==",
+              "Title": "GameOverController.cs",
+              "DocumentMoniker": "D:\\GitHub\\PRU212_SnowBroader_Lab2_Fixcode\\PRU212_SnowBoarder\\Assets\\Scripts\\GameOverController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameOverController.cs",
+              "ToolTip": "D:\\GitHub\\PRU212_SnowBroader_Lab2_Fixcode\\PRU212_SnowBoarder\\Assets\\Scripts\\GameOverController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameOverController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T11:40:15.586Z",
+              "WhenOpened": "2025-03-06T17:00:45.693Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Function.cs",
-              "DocumentMoniker": "D:\\PRU(Full)\\PRU212_SnowBroader_Lab2_DoneHai\\PRU212_SnowBoarder\\Assets\\Scenes\\Function.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Function.cs",
-              "ToolTip": "D:\\PRU(Full)\\PRU212_SnowBroader_Lab2_DoneHai\\PRU212_SnowBoarder\\Assets\\Scenes\\Function.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Function.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\GitHub\\PRU212_SnowBroader_Lab2_Fixcode\\PRU212_SnowBoarder\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "D:\\GitHub\\PRU212_SnowBroader_Lab2_Fixcode\\PRU212_SnowBoarder\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T11:38:19.286Z",
+              "WhenOpened": "2025-03-06T17:00:06.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CrushDetector.cs",
+              "DocumentMoniker": "D:\\GitHub\\PRU212_SnowBroader_Lab2_Fixcode\\PRU212_SnowBoarder\\Assets\\Scripts\\CrushDetector.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CrushDetector.cs",
+              "ToolTip": "D:\\GitHub\\PRU212_SnowBroader_Lab2_Fixcode\\PRU212_SnowBoarder\\Assets\\Scripts\\CrushDetector.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CrushDetector.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAYwFMAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T16:58:28.852Z",
               "EditorCaption": ""
             }
           ]
