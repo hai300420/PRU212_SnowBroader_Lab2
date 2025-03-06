@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      png-clipart-blue-pause-icon-button-game-icon-blisters-texture-metal-edge-game-pause-button-blue-text_0: -5860880196802678143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
