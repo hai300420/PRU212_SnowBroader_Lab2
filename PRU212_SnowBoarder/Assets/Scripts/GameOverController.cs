@@ -24,6 +24,7 @@ public class GameOverController : MonoBehaviour
         {
             gameWinText.SetActive(true);   // Show "You Win"
             gameOverText.SetActive(false); // Hide "Game Over"
+            GameManager.score = 0;
 
             // Reset the flag AFTER showing "You Win"
             GameManager.Flag = 0;
@@ -32,6 +33,7 @@ public class GameOverController : MonoBehaviour
         {
             gameWinText.SetActive(false);  // Hide "You Win"
             gameOverText.SetActive(true);  // Show "Game Over"
+            GameManager.score = 0;
         }
     }
 

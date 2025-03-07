@@ -29,5 +29,9 @@ public class PlayerCollision : MonoBehaviour
             audioManager.PlayCoinSound();
             gameManager.AddScore(10);
         }
+        if (other.CompareTag("Fence"))
+        {
+            gameManager.AddScore(-10);
+        }
     }
 }
