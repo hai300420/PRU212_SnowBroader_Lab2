@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     // The amount of torque applied to the player for rotation
     [SerializeField] float torqueAmount = 10f;
+    [SerializeField] float boostedTorqueAmount = 20f; // Tốc độ xoay khi tăng tốc
+
     // The speed when the player is boosted
     [SerializeField] float boostSpeed = 30f;
     // The normal movement speed of the player
@@ -77,13 +79,15 @@ public class PlayerController : MonoBehaviour
 
     void RotatePlayer()
     {
+        float currentTorque = Input.GetKey(KeyCode.LeftShift) ? boostedTorqueAmount : torqueAmount;
+
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            rb2d.AddTorque(torqueAmount);
+            rb2d.AddTorque(currentTorque);
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            rb2d.AddTorque(-torqueAmount);
+            rb2d.AddTorque(-currentTorque);
         }
     }
 
