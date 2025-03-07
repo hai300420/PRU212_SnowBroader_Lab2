@@ -61,7 +61,7 @@ Can increase/decrease speed based on slope inclination.
 
 **2. Obstacles:**
 
-Fences: Cause slowdowns or crashes if hit.
+Fences: Cause slowdowns or crashes if hit and -10 point.
 
 **3. Collectibles & Power-ups:**
 
@@ -83,7 +83,7 @@ Features different mountains with varying difficulty levels.
 
 Dynamic weather effects such as snowfall.
 
-In-game HUD displaying score, speed.
+In-game HUD displaying score.
 
 **3. Game Over Scene:**
 
@@ -117,6 +117,10 @@ Earn points by collecting coins and performing tricks.
 
 Score multipliers for chaining consecutive tricks.
 
+With any coin player will be earn 10 point
+
+With any flip player will be earn 50 poin
+
 **5. Increasing Difficulty:**
 
 Higher levels feature more obstacles and tougher terrain.
@@ -139,6 +143,6 @@ Left/Right Arrow Keys, A D Keys: Move the snowboarder.
 
 Spacebar: Jump.
 
-Up Arrow Key or W: Speed up.
+Up Arrow Key: Speed up.
 
 Perform tricks using key combinations.
