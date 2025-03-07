@@ -65,11 +65,11 @@ public class CrushDetector : MonoBehaviour
         }
         if (other.CompareTag("Fence"))
         {
-            Debug.Log("Fence hit! Speed reducing...");
+            Debug.Log("Fence hit! Speed reducing...");  
             playerController.ReduceSpeed();
             Destroy(other.gameObject);
             GetComponent<AudioSource>().PlayOneShot(crushSFX);
-            gameManager.AddScore(-10);
+            //gameManager.AddScore(-10);
         }
 
     }
