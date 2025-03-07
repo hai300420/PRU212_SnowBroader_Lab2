@@ -10,6 +10,7 @@ using UnityEngine.UI; // ◄◄ "SceneManagement" Namespace ◄◄
 
 public class CrushDetector : MonoBehaviour
 {
+    private GameManager gameManager;
     // ▼ "SerializeField" Attribute
     //      → to Dysplay the "Variable" 
     //      → in the "Inspector" Window ▼
@@ -23,7 +24,10 @@ public class CrushDetector : MonoBehaviour
     //      → when "Player Hits" the "Ground" ▼
     bool hasCrushed = false;
     private PlayerController playerController; // Reference to PlayerController
-
+    private void Awake()
+    {
+        gameManager = FindAnyObjectByType<GameManager>();
+    }
     void Start()
     {
         playerController = FindAnyObjectByType<PlayerController>(); // Find PlayerController in the scene
@@ -65,6 +69,7 @@ public class CrushDetector : MonoBehaviour
             playerController.ReduceSpeed();
             Destroy(other.gameObject);
             GetComponent<AudioSource>().PlayOneShot(crushSFX);
+            gameManager.AddScore(-10);
         }
 
     }
