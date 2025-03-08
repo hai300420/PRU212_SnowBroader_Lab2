@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float boostedTorqueAmount = 20f; // Tốc độ xoay khi tăng tốc
 
     // The speed when the player is boosted
-    [SerializeField] float boostSpeed = 30f;
+    [SerializeField] float boostSpeed = 35f;
     // The normal movement speed of the player
     [SerializeField] float baseSpeed = 20f;
     // The force applied when the player jumps
@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
             RespondToBoost();
             Jump();
             CheckFlip(); // Kiểm tra lộn vòng
+            AdjustSpeedBasedOnSlope(); // NEW: Dynamically adjust speed
         }
     }
 
@@ -149,10 +150,13 @@ public class PlayerController : MonoBehaviour
     {
         if (isSpeedReduced) return;
         if (surfaceEffector2D == null) return;
+        float boostFactor = 1.5f;
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) && IsGrounded())
         {
-            currentSpeed = boostSpeed;
+            // currentSpeed = boostSpeed;
+            currentSpeed *= boostFactor; // Multiply current speed
+            Debug.Log("Boost applied. New speed: " + currentSpeed);
             surfaceEffector2D.speed = currentSpeed;
         }
         else
@@ -166,12 +170,63 @@ public class PlayerController : MonoBehaviour
     {
         isSpeedReduced = true;
         currentSpeed = reducedSpeed;
-        surfaceEffector2D.speed = currentSpeed;
+        if (surfaceEffector2D != null)
+        {
+            surfaceEffector2D.speed = currentSpeed;
+        }
+        Debug.Log("Speed reduced to: " + currentSpeed);
         Invoke("ResetSpeed", 3f);
     }
 
     void ResetSpeed()
     {
         isSpeedReduced = false; // Allows speed changes again
+        currentSpeed = baseSpeed;
+
+        if (surfaceEffector2D != null)
+        {
+            surfaceEffector2D.speed = currentSpeed;
+        }
+
+        Debug.Log("Speed reset to: " + currentSpeed);
     }
+    public float GetSpeed()
+    {
+        return currentSpeed;
+    }
+
+
+    void AdjustSpeedBasedOnSlope()
+    {
+        if (surfaceEffector2D == null || isSpeedReduced) return;
+
+        // Get the player's movement direction
+        float yVelocity = rb2d.linearVelocity.y;
+
+        float speedFactor = 1.0f;
+
+        if (yVelocity < -0.5f) // Moving downhill
+        {
+            speedFactor = 1.5f; // Increase speed
+        }
+        else if (yVelocity > 0.5f) // Moving uphill
+        {
+            speedFactor = 0.7f; // Reduce speed
+        }
+
+        // Update speed based on terrain
+        currentSpeed = baseSpeed * speedFactor;
+
+        // If boosting, multiply the adjusted speed
+        if (Input.GetKey(KeyCode.UpArrow) && IsGrounded())
+        {
+            float boostFactor = 1.5f;
+            currentSpeed *= boostFactor;
+            Debug.Log("Boosted while on slope! New speed: " + currentSpeed);
+        }
+
+        surfaceEffector2D.speed = currentSpeed;
+    }
+
+
 }

@@ -2,6 +2,7 @@
 //      → defines the "Namespace" Directive 
 //      → that "Contains" a "Class Used" in the "Code" ▼
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,6 +24,7 @@ public class CrushDetector : MonoBehaviour
     //      → to "Avoid Double Sounds & Particles Effect" 
     //      → when "Player Hits" the "Ground" ▼
     bool hasCrushed = false;
+    bool hasHitFence = false;
     private PlayerController playerController; // Reference to PlayerController
     private void Awake()
     {
@@ -63,23 +65,39 @@ public class CrushDetector : MonoBehaviour
             //      → to "Call" the "ReloadScene()" Method ▼
             Invoke("ReloadScene", loadDelay);
         }
-        if (other.CompareTag("Fence"))
+        if (other.CompareTag("Fence") && !hasHitFence) // Prevent multiple triggers
         {
-            Debug.Log("Fence hit! Speed reducing...");  
-            playerController.ReduceSpeed();
-            Destroy(other.gameObject);
+            hasHitFence = true;
+            Debug.Log("Fence hit! Speed reducing...");
+
+            if (playerController != null)
+            {
+                playerController.ReduceSpeed(); // Ensure it is being called
+            }
+
+            other.GetComponent<Collider2D>().enabled = false; // Disable collider
             GetComponent<AudioSource>().PlayOneShot(crushSFX);
-            //gameManager.AddScore(-10);
+
+            gameManager.AddScore(-10);
+
+            Destroy(other.gameObject);
+
+            StartCoroutine(ResetFenceFlag());
         }
+
 
     }
 
+    IEnumerator ResetFenceFlag()
+    {
+        yield return new WaitForSeconds(0.5f);
+        hasHitFence = false;
+    }
 
-
-   // ▬ "ReloadScene()" Method 
-   //       → to "Reload" the "Level 1" Scene
-   //       → when he "Player Hits" the "Ground" ▬
-   void ReloadScene()
+    // ▬ "ReloadScene()" Method 
+    //       → to "Reload" the "Level 1" Scene
+    //       → when he "Player Hits" the "Ground" ▬
+    void ReloadScene()
    {
         // ▼ "LoadScene()" Built-In Method
         //      → from the "SceneManager" Class 
